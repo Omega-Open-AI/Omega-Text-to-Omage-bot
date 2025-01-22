@@ -1,0 +1,8 @@
+defaults:
+  model: "dall-e-3"
+  quality: "standard"
+  size: "1024x1024"
+  output_dir: "./outputs"
+  max_retries: 3
+  retry_delay: 2
+  allowed_extensions: [".png", ".jpg"]
