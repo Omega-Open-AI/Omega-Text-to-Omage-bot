@@ -4,15 +4,15 @@ diffusers>=0.24.0
 transformers>=4.36.0
 torch>=2.1.0
 Pillow>=10.0.0
-
-# Configuration and data handling
 PyYAML>=6.0
 python-dotenv>=1.0.0
-
-# Utilities
 tqdm>=4.66.0
 requests>=2.31.0
 numpy>=1.24.0
+
+# Modal deployment dependencies
+modal-client>=0.54.0
+prometheus-client>=0.17.0
 
 # Development dependencies
 pytest>=7.4.0
