@@ -1,0 +1,34 @@
+# Omega Text to Image Bot Configuration
+# Last updated: 2025-01-22 22:29:17
+# Author: Omega-Open-AI
+
+# Bot Settings
+bot:
+  name: "Omega Text to Image Bot"
+  token: "${BOT_TOKEN}"  # Set in environment variables
+  admin_users: []  # List of admin user IDs
+
+# Image Generation Settings
+generation:
+  max_image_size: 1024
+  default_model: "stable-diffusion-v1.5"
+  supported_formats: ["png", "jpg"]
+  timeout: 300  # seconds
+
+# Rate Limiting
+rate_limit:
+  max_requests_per_minute: 5
+  max_requests_per_day: 50
+  cooldown_period: 3600  # seconds
+
+# Storage
+storage:
+  cache_dir: "cache"
+  output_dir: "output"
+  max_cache_size: 1024  # MB
+
+# Monitoring
+monitoring:
+  enabled: true
+  log_level: "INFO"
+  metrics_port: 9090

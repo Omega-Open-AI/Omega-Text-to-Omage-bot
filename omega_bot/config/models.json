@@ -1,0 +1,30 @@
+{
+  "models": {
+    "stable-diffusion-v1.5": {
+      "name": "Stable Diffusion v1.5",
+      "type": "diffusion",
+      "version": "1.5",
+      "checkpoint": "runwayml/stable-diffusion-v1-5",
+      "requires_safety_checker": true,
+      "default_parameters": {
+        "num_inference_steps": 50,
+        "guidance_scale": 7.5,
+        "negative_prompt": ""
+      }
+    },
+    "stable-diffusion-v2.1": {
+      "name": "Stable Diffusion v2.1",
+      "type": "diffusion",
+      "version": "2.1",
+      "checkpoint": "stabilityai/stable-diffusion-2-1",
+      "requires_safety_checker": true,
+      "default_parameters": {
+        "num_inference_steps": 50,
+        "guidance_scale": 7.5,
+        "negative_prompt": ""
+      }
+    }
+  },
+  "default_model": "stable-diffusion-v1.5",
+  "model_directory": "models"
+}
