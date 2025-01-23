@@ -1,168 +1,162 @@
 <div align="center">
-  <img src="docs/assets/omega-bot-logo.png" alt="Omega Bot Logo" width="200"/>
-
-  # 🤖 Omega Text to Image Bot
+  <img src="docs/assets/omega-bot-logo.png" alt="Omega Bot" width="300" style="border-radius: 50%; box-shadow: 0 0 20px #7C4DFF;">
   
-  <p align="center">
-    <strong>Unleashing AI-Powered Creativity: Turn Words into Visual Masterpieces 🎨</strong>
-  </p>
+  <h1>🎇 Omega Text-to-Image Bot: Where Words Become Art</h1>
+  
+  <h3>⚡ Instant Imagination Engine | 🧠 AI-Powered Creativity | 🌍 Open Source Magic</h3>
 
-  [![CI/CD Pipeline](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot/actions/workflows/ci.yml)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
-  [![Docker](https://img.shields.io/badge/docker-supported-brightgreen.svg)](https://www.docker.com/)
-  [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-  [![Modal Deploy](https://img.shields.io/badge/deploy-modal.com-FF69B4)](https://modal.com)
+  [![CI/CD](https://img.shields.io/github/actions/workflow/status/Omega-Open-AI/Omega-Text-to-Omage-bot/ci.yml?label=CI%2FCD&logo=github&style=for-the-badge)](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot/actions)
+  [![Docker](https://img.shields.io/badge/DOCKER-READY-2496ED?style=for-the-badge&logo=docker)](https://hub.docker.com/r/omegaopenai/omega-bot)
+  [![License](https://img.shields.io/badge/License-MIT-magenta?style=for-the-badge)](LICENSE)
+  [![OpenAI](https://img.shields.io/badge/Powered%20By-OpenAI-412991?style=for-the-badge&logo=openai)](https://openai.com)
+
+  <img src="https://readme-typing-svg.demolab.com?font=Roboto+Mono&size=22&duration=3000&pause=500&color=7C4DFF&center=true&vCenter=true&width=800&height=50&lines=Describe+Your+Dream+→+Get+Art+in+Seconds;From+Novelist+to+Digital+Artist+in+One+Command;Open-Source+AI+Magic+at+Your+Fingertips" alt="Typing Animation">
 </div>
 
-## 🌟 What Makes Us Special
+---
 
-- 🎨 **AI-Powered Magic**: Transform your wildest imaginings into stunning visuals using cutting-edge AI
-- 🚀 **Lightning Fast**: GPU-accelerated image generation with Modal.com deployment
-- 🤖 **Telegram Integration**: Seamless interaction through your favorite messenger
-- 🛡️ **Enterprise-Grade Security**: Built-in content filtering and smart rate limiting
-- 🎯 **Model Flexibility**: Support for multiple Stable Diffusion models
-- 📊 **Real-Time Insights**: Comprehensive metrics and performance monitoring
-- ♾️ **Infinite Scalability**: Cloud-native architecture with auto-scaling capabilities
-- 🔄 **Zero Downtime**: Continuous deployment with automated failover
+## 🌈 Features That Spark Joy
 
-## 🚀 Deployment Options
+✨ **Instant Art Generation**  
+🚀 **Multi-Platform Ready** (CLI • Docker • Cloud)  
+🎭 **Style Customization** (Realism • Anime • Cyberpunk)  
+🔒 **Military-Grade Security** (Auto-Sanitization • Content Filtering)  
+🧩 **Modular Architecture** (Plug & Play Models)  
+📊 **Smart Analytics Dashboard**  
+🤖 **Auto-Magic Error Recovery**  
+🌐 **Multi-Language Support**  
 
-### 🌐 Modal.com Deployment (Recommended)
+---
+
+## 🚀 Quick Start: Choose Your Adventure!
+
+### 🐍 Python Wizard
 ```bash
-# Clone the magic
+# Clone the magic repository
 git clone https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot.git
 cd Omega-Text-to-Omage-bot
 
-# Set up your environment
-cp .env.example .env
-# Configure your magical parameters in .env
+# Create your magic workshop
+python -m venv .venv && source .venv/bin/activate  # 🪄 Windows: .venv\Scripts\activate
 
-# Launch to the cloud
-./modal_setup.sh
-```
-
-### 🐳 Docker Alternative
-```bash
-# Clone and navigate
-git clone https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot.git
-cd Omega-Text-to-Omage-bot
-
-# Configure environment
-cp .env.example .env
-# Add your enchanted tokens to .env
-
-# Unleash the container
-docker-compose up -d
-```
-
-### 🐍 Local Development
-```bash
-# Get the code
-git clone https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot.git
-cd Omega-Text-to-Omage-bot
-
-# Create your magical environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# Install the spells
+# Install spell components
 pip install -r requirements.txt
 
-# Configure
-cp .env.example .env
-# Add your mystical tokens to .env
+# Configure your magic credentials
+cp config/config.example.yaml config/config.yaml
+echo "OPENAI_API_KEY='your_key_here'" > .env
 
-# Launch
-python -m omega_bot
+# Summon the art genie!
+python -m omega_bot.main generate --prompt "A cyberpunk cat hacking the mainframe"
 ```
 
-## 💫 Usage & Commands
+### 🐳 Docker Captain
+```bash
+# Sail the container seas
+docker run -it --rm \
+  -v $(pwd)/output:/app/output \
+  -e OPENAI_API_KEY="your_key_here" \
+  omegaopenai/omega-bot:latest \
+  generate --prompt "A steampunk library floating in space"
+```
 
-1. **Begin Your Journey**: `/start` - Awaken the bot
-2. **Create Art**: `/generate [your imagination]`
-   ```
-   /generate a mystical dragon soaring through aurora borealis
-   ```
-3. **Configure**: `/settings` - Adjust your magical parameters
-4. **Guidance**: `/help` - Summon the help wizard
+### ☁️ Cloud Conjurer (Modal.com)
+```bash
+# Deploy to the magic cloud
+modal deploy omega_bot.modal_app
 
-## 🎮 Advanced Features
+# Cast spells remotely
+modal run omega_bot.main --prompt "A dragon made of constellations"
+```
 
-### 🔧 Configuration
+---
+
+## 🧙♂️ Command Grimoire
+
+| Spell                        | Effect                                 | Example Incantation                          |
+|------------------------------|----------------------------------------|-----------------------------------------------|
+| `generate`                   | Create image from text                 | `generate --prompt "A robot painting stars"`  |
+| `batch-create`               | Generate multiple images               | `batch-create prompts.txt --style watercolor` |
+| `configure`                  | Update magic settings                  | `configure --model dall-e-3 --quality hd`     |
+| `monitor`                    | View creation analytics                | `monitor --stats --live`                      |
+| `convert`                    | Transform image styles                 | `convert input.jpg --style van-gogh`          |
+
+---
+
+## 🏰 Architecture: The Magic Behind the Curtain
+
+```bash
+omega_bot/
+├── src/                   # Core magic components
+│   ├── spells/           # Generation incantations
+│   ├── potions/          # Image processing
+│   └── grimoire/         # Ancient AI knowledge
+├── config/               # Magic parameters
+│   └── config.yaml       # Spell configuration
+├── tests/                # Quality control
+│   └── test_spells.py    # Ensure spell accuracy
+└── artifacts/            # Generated masterpieces
+```
+
+---
+
+## 🧪 Customize Your Magic
+
+Edit `config/config.yaml` to become a true AI wizard:
+
 ```yaml
-bot:
-  name: "Omega Text to Image Bot"
-  max_image_size: 1024
-  supported_formats: ["png", "jpg"]
-  models:
-    - "stable-diffusion-v2"
-    - "stable-diffusion-xl"
+magic:
+  model: "dall-e-3"           # 🧙♂️ Choose your familiar
+  resolution: "1792x1024"     # 🖼️ Canvas size
+  style: "digital-art"        # 🎨 Artistic medium
+  quality: "hd"               # 🔍 Detail level
+  safety: "strict"            # 🛡️ Content filters
 
 performance:
-  gpu_acceleration: true
-  auto_scaling: enabled
-  max_concurrent_requests: 50
-
-security:
-  content_filtering: strict
-  rate_limiting:
-    requests_per_minute: 5
-    requests_per_day: 50
+  parallel_spells: 4          # ⚡ Simultaneous creations
+  auto_retry: 3               # 🔄 Automatic error recovery
+  cache_spells: true          # 📦 Memory optimization
 ```
 
-### 📊 Monitoring Dashboard
+---
 
-Access your insights at:
-- 📈 Metrics: `https://<your-app>.modal.run/metrics`
-- 💓 Health: `https://<your-app>.modal.run/health`
-- 📝 Logs: `modal logs omega-text-to-image-bot`
+## 🤝 Join Our Wizard Guild
 
-## 🏗️ Architecture
+1. **Fork the Cauldron**  
+   `git clone https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot.git`
 
-```
-omega_bot/
-├── modal/          # Cloud deployment sorcery
-├── core/           # Bot's neural center
-├── security/       # Protection spells
-├── data/          # Knowledge repository
-└── utils/         # Magical utilities
-```
+2. **Brew New Magic**  
+   Create feature branch:  
+   `git checkout -b feature/amazing-spell`
 
-## 🛠️ Development Requirements
+3. **Test Your Potions**  
+   Run the magic tests:  
+   `pytest tests/ --cov=omega_bot -v`
 
-- Python 3.8+
-- CUDA-capable GPU (recommended)
-- Modal.com account
-- Telegram Bot Token
-- Active imagination
+4. **Send Owl Post**  
+   Create a PR with:  
+   - Detailed spell documentation ✍️  
+   - Passing test scrolls ✅  
+   - Magical before/after examples 🖼️
 
-## 🤝 Join the Magic
+---
 
-1. 🍴 Fork the repository
-2. 🌟 Create your feature branch
-3. ✨ Add your enhancements
-4. 🔍 Test your magic
-5. 🚀 Submit a mystical PR
+## 📜 License & Acknowledgments
 
-## 📜 License & Credits
+This magical artifact is licensed under the [MIT License](LICENSE). Special thanks to:
 
-- 📄 MIT License
-- 🙏 Powered by:
-  - [Stable Diffusion](https://stability.ai/)
-  - [Modal.com](https://modal.com)
-  - [python-telegram-bot](https://python-telegram-bot.org/)
-  - [Hugging Face](https://huggingface.co/)
-
-## 🆘 Support & Resources
-
-- 📚 [Comprehensive Documentation](docs/README.md)
-- 🐛 [Issue Tracker](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot/issues)
-- 💬 [Community Discussions](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot/discussions)
-- 🎓 [Tutorials & Guides](docs/tutorials/)
+- OpenAI for the DALL-E magic
+- Docker for containerized cauldrons
+- GitHub Actions for automated spell checking
+- You for joining our magical journey! ✨
 
 ---
 
 <div align="center">
-  <sub>Crafted with ❤️ by <a href="https://github.com/Omega-Open-AI">Omega-Open-AI</a></sub>
+  <h3>🔮 Ready to Create Magic?</h3>
+  
+  [![Open in GitHub Codespaces](https://img.shields.io/badge/Launch%20in-Codespaces-181717?style=for-the-badge&logo=github)](https://codespaces.new/Omega-Open-AI/Omega-Text-to-Omage-bot)
+  [![Discord](https://img.shields.io/badge/Join%20Community-Discord-5865F2?style=for-the-badge&logo=discord)](https://discord.gg/omega-ai)
+  
+  <sub>Made with ❤️ and 🧪 by [Omega Open AI](https://github.com/Omega-Open-AI)</sub>
 </div>
