@@ -1,168 +1,168 @@
 <div align="center">
+  <img src="docs/assets/omega-bot-logo.png" alt="Omega Bot Logo" width="200"/>
+
+  # 🤖 Omega Text to Image Bot
   
-# 🎇 Omega Text-to-Image Universe
+  <p align="center">
+    <strong>Unleashing AI-Powered Creativity: Turn Words into Visual Masterpieces 🎨</strong>
+  </p>
 
-[![Multi-Platform Magic](https://img.shields.io/badge/Platforms-6_Ecosystems-7C4DFF?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot)
-[![AI Power](https://img.shields.io/badge/AI_Engines-3_Cores-FF6F00?style=for-the-badge&logo=openai)](https://openai.com)
-[![Art Styles](https://img.shields.io/badge/Styles-∞_Possibilities-009688?style=for-the-badge)](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot/wiki/Style-Gallery)
-
-<img src="https://media.giphy.com/media/3ohs4kI2X9r7O8ZtoA/giphy.gif" width="600" alt="Installation Magic">
-
+  [![CI/CD Pipeline](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot/actions/workflows/ci.yml)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
+  [![Docker](https://img.shields.io/badge/docker-supported-brightgreen.svg)](https://www.docker.com/)
+  [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+  [![Modal Deploy](https://img.shields.io/badge/deploy-modal.com-FF69B4)](https://modal.com)
 </div>
 
----
+## 🌟 What Makes Us Special
 
-## 🌟 Installation Grimoire: Choose Your Realm
+- 🎨 **AI-Powered Magic**: Transform your wildest imaginings into stunning visuals using cutting-edge AI
+- 🚀 **Lightning Fast**: GPU-accelerated image generation with Modal.com deployment
+- 🤖 **Telegram Integration**: Seamless interaction through your favorite messenger
+- 🛡️ **Enterprise-Grade Security**: Built-in content filtering and smart rate limiting
+- 🎯 **Model Flexibility**: Support for multiple Stable Diffusion models
+- 📊 **Real-Time Insights**: Comprehensive metrics and performance monitoring
+- ♾️ **Infinite Scalability**: Cloud-native architecture with auto-scaling capabilities
+- 🔄 **Zero Downtime**: Continuous deployment with automated failover
 
-### 1. 🏰 Windows Castle (CPU/GPU)
-```powershell
-# 🧙♂️ Step 1: Summon Python
-winget install Python.Python.3.10
+## 🚀 Deployment Options
 
-# 🔥 Step 2: CUDA Dragon Taming (For GPU)
-choco install cuda --version=12.1
-
-# 🌌 Step 3: Clone the Cosmos
-git clone https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot
+### 🌐 Modal.com Deployment (Recommended)
+```bash
+# Clone the magic
+git clone https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot.git
 cd Omega-Text-to-Omage-bot
 
-# 🧪 Step 4: Brew Virtual Environment
-python -m venv .omegaenv
-.omegaenv\Scripts\activate
+# Set up your environment
+cp .env.example .env
+# Configure your magical parameters in .env
 
-# ⚡ Step 5: Install with Thunder
-pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
-
-# 🚀 Step 6: Launch Sequence
-$env:OMEGA_DEVICE = "cuda"
-python -m omega_bot.main generate --prompt "Cyber wizard coding in the metaverse"
+# Launch to the cloud
+./modal_setup.sh
 ```
 
-### 2. 🐧 Linux Labyrinth
+### 🐳 Docker Alternative
 ```bash
-# 🧰 Step 1: Assemble Tools
-sudo apt-get install python3.10 python3.10-venv nvidia-driver-535 -y
+# Clone and navigate
+git clone https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot.git
+cd Omega-Text-to-Omage-bot
 
-# 🌠 Step 2: Clone the Galaxy
-git clone https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot && cd "$_"
+# Configure environment
+cp .env.example .env
+# Add your enchanted tokens to .env
 
-# 🌀 Step 3: Create Quantum Bubble
-python3.10 -m venv .quantumenv
-source .quantumenv/bin/activate
+# Unleash the container
+docker-compose up -d
+```
 
-# 🧲 Step 4: Attract Dependencies
+### 🐍 Local Development
+```bash
+# Get the code
+git clone https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot.git
+cd Omega-Text-to-Omage-bot
+
+# Create your magical environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install the spells
 pip install -r requirements.txt
 
-# 🪐 Step 5: Multi-GPU Warp Drive
-CUDA_VISIBLE_DEVICES=0,1 omega_batch --input cosmic_prompts.txt --parallel 2
+# Configure
+cp .env.example .env
+# Add your mystical tokens to .env
+
+# Launch
+python -m omega_bot
 ```
 
-### 3. 🐳 Docker Dimension
-```bash
-# 🏗️ Step 1: Build Reality Container
-docker build -t omega-bot:latest .
+## 💫 Usage & Commands
 
-# 🌉 Step 2: Bridge to Imageverse
-docker run -it --gpus all \
-  -v $(pwd)/artifacts:/app/artifacts \
-  -e OPENAI_API_KEY="your_stargate_key" \
-  omega-bot:latest \
-  generate --prompt "Floating islands with crystal trees" --quality 8k
+1. **Begin Your Journey**: `/start` - Awaken the bot
+2. **Create Art**: `/generate [your imagination]`
+   ```
+   /generate a mystical dragon soaring through aurora borealis
+   ```
+3. **Configure**: `/settings` - Adjust your magical parameters
+4. **Guidance**: `/help` - Summon the help wizard
 
-# 🏭 Step 3: Industrial Mode
-docker-compose -f docker-compose.cluster.yml up --scale nebula-workers=8
+## 🎮 Advanced Features
+
+### 🔧 Configuration
+```yaml
+bot:
+  name: "Omega Text to Image Bot"
+  max_image_size: 1024
+  supported_formats: ["png", "jpg"]
+  models:
+    - "stable-diffusion-v2"
+    - "stable-diffusion-xl"
+
+performance:
+  gpu_acceleration: true
+  auto_scaling: enabled
+  max_concurrent_requests: 50
+
+security:
+  content_filtering: strict
+  rate_limiting:
+    requests_per_minute: 5
+    requests_per_day: 50
 ```
 
-### 4. ☁️ Modal Cloud Nexus
-```bash
-# 🔑 Step 1: Obtain Celestial Keys
-pip install modal
-modal setup
+### 📊 Monitoring Dashboard
 
-# 🛸 Step 2: Deploy Quantum Core
-modal deploy omega_bot.modal_core
+Access your insights at:
+- 📈 Metrics: `https://<your-app>.modal.run/metrics`
+- 💓 Health: `https://<your-app>.modal.run/health`
+- 📝 Logs: `modal logs omega-text-to-image-bot`
 
-# 🌌 Step 3: Cosmic Generation
-modal run omega_bot.main --prompt "Time-traveling dinosaurs with laser eyes" \
-  --size 1792x1024 \
-  --quality hd
+## 🏗️ Architecture
+
+```
+omega_bot/
+├── modal/          # Cloud deployment sorcery
+├── core/           # Bot's neural center
+├── security/       # Protection spells
+├── data/          # Knowledge repository
+└── utils/         # Magical utilities
 ```
 
-### 5. 🌐 Cloud Sanctuaries
-<table>
-  <tr>
-    <th>Platform</th>
-    <th>Installation Spell</th>
-    <th>Special Power</th>
-  </tr>
-  <tr>
-    <td>GitHub Codespaces</td>
-    <td>[![Open in Codespaces](https://img.shields.io/badge/Launch_Now!-Codespaces-2088FF?style=flat-square)](https://codespaces.new/Omega-Open-AI/Omega-Text-to-Omage-bot)</td>
-    <td>✨ Pre-Enchanted GPU Workspace</td>
-  </tr>
-  <tr>
-    <td>Google Colab</td>
-    <td>[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Omega-Open-AI/Omega-Text-to-Omage-bot/blob/main/omega_colab.ipynb)</td>
-    <td>⚡ Free T4 GPU Access</td>
-  </tr>
-  <tr>
-    <td>AWS SageMaker</td>
-    <td>
-```bash
-!pip install omega-bot[sagemaker]
-from omega_sagemaker import launch_studio
-launch_studio()
-```
-</td>
-    <td>🌪️ Enterprise Scaling</td>
-  </tr>
-</table>
+## 🛠️ Development Requirements
 
----
+- Python 3.8+
+- CUDA-capable GPU (recommended)
+- Modal.com account
+- Telegram Bot Token
+- Active imagination
 
-## 🔮 Reality Integrations
+## 🤝 Join the Magic
 
-[![Hugging Face](https://img.shields.io/badge/Model_Zoo-🤗_HF_Models-FFD21F?style=for-the-badge)](https://huggingface.co/Omega-Open-AI)
-[![Discord](https://img.shields.io/badge/Live_Generation-💬_Discord-5865F2?style=for-the-badge)](https://discord.gg/omega-ai)
-[![Slack](https://img.shields.io/badge/Team_Workflows-💼_Slack-4A154B?style=for-the-badge)](https://slack.com/apps)
-[![Telegram](https://img.shields.io/badge/Mobile_Magic-📱_Telegram-26A5E4?style=for-the-badge)](https://t.me/OmegaAIBot)
+1. 🍴 Fork the repository
+2. 🌟 Create your feature branch
+3. ✨ Add your enhancements
+4. 🔍 Test your magic
+5. 🚀 Submit a mystical PR
 
----
+## 📜 License & Credits
 
-## ⚡ Power Sources
+- 📄 MIT License
+- 🙏 Powered by:
+  - [Stable Diffusion](https://stability.ai/)
+  - [Modal.com](https://modal.com)
+  - [python-telegram-bot](https://python-telegram-bot.org/)
+  - [Hugging Face](https://huggingface.co/)
 
-<div align="center">
-  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" width="200">
-  <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" width="200">
-  <img src="https://www.vectorlogo.zone/logos/nvidia/nvidia-ar21.svg" width="200">
-  <br>
-  <img src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" width="200">
-  <img src="https://modal.com/logo.svg" width="200">
-  <img src="https://www.vectorlogo.zone/logos/openai/openai-ar21.svg" width="200">
-</div>
+## 🆘 Support & Resources
 
----
-
-## 🛠️ Reality Toolkit
-
-```bash
-# 🧰 Diagnostic Orb
-omega_diag --full-scan --repair
-
-# 🔄 Quantum Reset
-omega_purge --cache --models --logs
-
-# 📊 Energy Monitor
-omega_monitor --dashboard --port 8080
-
-# 💾 Memory Alchemy
-omega_optimize --precision fp16 --cache-size 10GB
-```
+- 📚 [Comprehensive Documentation](docs/README.md)
+- 🐛 [Issue Tracker](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot/issues)
+- 💬 [Community Discussions](https://github.com/Omega-Open-AI/Omega-Text-to-Omage-bot/discussions)
+- 🎓 [Tutorials & Guides](docs/tutorials/)
 
 ---
 
 <div align="center">
-  <sub>⚗️ Reality Version 3.1.4 | 🧬 Neural Core 0xCAFEBABE | 📅 Stardate 12023.4</sub>
-  <br>
-  <sub>Created with ❤️ by [Omega AI Collective](https://github.com/Omega-Open-AI) | 🌍 Join our [Cosmic Discord](https://discord.gg/omega-ai)</sub>
+  <sub>Crafted with ❤️ by <a href="https://github.com/Omega-Open-AI">Omega-Open-AI</a></sub>
 </div>
